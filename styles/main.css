@@ -1,0 +1,81 @@
+/* Globals */
+
+div [data-wall="true"] {
+    background-color: brown;
+    border: 1px black;
+}
+
+div [data-crate="true"] {
+    background: url("../images/crate100x100.gif");
+    border: 1px black;
+}
+
+div [data-point="true"] {
+    background-color: pink;
+    border: 1px black;
+}
+
+div [data-crate="true"][data-point="true"] {
+    background-color: gold;
+    border: 1px black;
+}
+
+/* Classes */
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.cell {
+    height: 100px;
+    width: 100px;
+}
+
+.animateN {
+    animation-iteration-count: 1;
+    animation: 0.25s linear alternate move_man_up;
+}
+
+.animateS {
+    animation-iteration-count: 1;
+    animation: 0.25s linear alternate move_man_down;
+}
+
+.animateE {
+    animation-iteration-count: 1;
+    animation: 0.25s linear alternate move_man_right;
+}
+
+.animateW {
+    animation-iteration-count: 1;
+    animation: 0.25s linear alternate move_man_left;
+}
+
+@keyframes move_man_up { from { margin-top: 0px; } to { margin-top: -50px; }  }
+@keyframes move_man_down { from { margin-top: 0px; } to { margin-top: 50px; }  }
+@keyframes move_man_right { from { margin-left: 0px; } to { margin-left: 50px; }  }
+@keyframes move_man_left { from { margin-left: 0px; } to { margin-left: -50px; }  }
+/* Identified */
+
+#content {
+    align-self: center;
+    align-content: center;
+}
+
+#maze {
+    display: flex;
+    flex-wrap: wrap;
+    width: 800px;
+    height: 900px;
+}
+
+#running-man {
+    min-width: 100px;
+    height: 100px;
+    background: url(../images/runningman100x100.gif) bottom center no-repeat;
+    position: absolute;
+    z-index: 3;
+}
+
+/* Others */
