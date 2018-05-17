@@ -30,6 +30,7 @@ div [data-crate="true"][data-point="true"] {
 .cell {
     height: 100px;
     width: 100px;
+    font-size: 50px;
 }
 
 .animateN {
